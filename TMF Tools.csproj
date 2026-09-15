@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{DD201741-6FCF-4838-9C92-7DFBE68BA4AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMF Tools</RootNamespace>
+    <AssemblyName>TMF Tools</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>TMF_Tools.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BetterListViewExpress-net35" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmbeddedAssembly.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TMF\Enums\AutoSaveSetting.cs" />
+    <Compile Include="TMF\Enums\BadBoyType.cs" />
+    <Compile Include="TMF\Enums\BiomeType.cs" />
+    <Compile Include="TMF\Enums\Block.cs" />
+    <Compile Include="TMF\Enums\BlueprintCraftType.cs" />
+    <Compile Include="TMF\Enums\CameraType.cs" />
+    <Compile Include="TMF\Enums\GameDifficulty.cs" />
+    <Compile Include="TMF\Enums\GameMode.cs" />
+    <Compile Include="TMF\Enums\Item.cs" />
+    <Compile Include="TMF\Enums\ItemAction.cs" />
+    <Compile Include="TMF\Enums\ItemType.cs" />
+    <Compile Include="TMF\Enums\MapAttribute.cs" />
+    <Compile Include="TMF\Enums\MapMarkerType.cs" />
+    <Compile Include="TMF\Enums\MobType.cs" />
+    <Compile Include="TMF\Enums\NamePlateSetting.cs" />
+    <Compile Include="TMF\Enums\NotificationType.cs" />
+    <Compile Include="TMF\Enums\Permissions.cs" />
+    <Compile Include="TMF\Enums\PriceListType.cs" />
+    <Compile Include="TMF\Enums\SaveFormat.cs" />
+    <Compile Include="TMF\Enums\ShaderDetail.cs" />
+    <Compile Include="TMF\Enums\SkillType.cs" />
+    <Compile Include="TMF\Enums\UpdateBlockMethod.cs" />
+    <Compile Include="TMF\Enums\UserControlSetting.cs" />
+    <Compile Include="TMF\Enums\ZoneType.cs" />
+    <Compile Include="TMF\FileTypes\GamertagDataDb.cs" />
+    <Compile Include="TMF\FileTypes\HeaderDAT.cs" />
+    <Compile Include="TMF\FileTypes\PlayerDAT.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\CharacterSkilldata.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\GamertagData.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\GameSettings.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\GlobalGamerSettings.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\PlayerSettings.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\PlayerStats.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\PlayerUnlockData.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveArcadeState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveBookState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveCharacterBaseState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveCharacterState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveChestState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveGameState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveInventoryItem.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveInventoryState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveItemParticle.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveMobManagerState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveMobState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SavePlayerState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveSignsState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveSignState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveSpiderState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SaveTeleportState.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\Script.cs" />
+    <Compile Include="TMF\Structs\EntityStructs\SkillData.cs" />
+    <Compile Include="TMF\Structs\GlobalPoint3D.cs" />
+    <Compile Include="TMF\Structs\MapStructs\BiomeParams.cs" />
+    <Compile Include="TMF\Structs\MapStructs\BoxInt.cs" />
+    <Compile Include="TMF\Structs\MapStructs\FloodData.cs" />
+    <Compile Include="TMF\Structs\MapStructs\MapMarker.cs" />
+    <Compile Include="TMF\Structs\MapStructs\Point3D.cs" />
+    <Compile Include="TMF\Structs\MapStructs\SaveZoneState.cs" />
+    <Compile Include="TMF\Structs\MapStructs\TerrainData.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\ActionLog.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\Blueprint.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\BlueprintState.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\History.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\Price.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\PriceList.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\ServerData.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\ServerEntry.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\Vector2.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\Vector3.cs" />
+    <Compile Include="TMF\Structs\OtherStructs\WisdomScrollState.cs" />
+    <Compile Include="TMF\TMF.cs" />
+    <Compile Include="TMF\Utils\DataScrambler.cs" />
+    <Compile Include="TMF\Utils\Encryption.cs" />
+    <Compile Include="TMF\Utils\Globals.cs" />
+    <Compile Include="TMF\Utils\ReadingUtils.cs" />
+    <Compile Include="TMF\Utils\StringUtils.cs" />
+    <Compile Include="TMF\XMLTools\BlueprintData.cs" />
+    <Compile Include="TMF\XMLTools\BlueprintDataResult.cs" />
+    <Compile Include="TMF\XMLTools\BlueprintXML.cs" />
+    <Compile Include="TMF\XMLTools\ItemData.cs" />
+    <Compile Include="TMF\XMLTools\ItemDataXML.cs" />
+    <Compile Include="TMF\XMLTools\SkillData.cs" />
+    <Compile Include="TMF\XMLTools\SkillDataXML.cs" />
+    <Compile Include="TMF_Tools\Forms\HeaderDatBlueprints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMF_Tools\Forms\HeaderDatBlueprints.Designer.cs">
+      <DependentUpon>HeaderDatBlueprints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMF_Tools\Forms\PlayerDatVariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMF_Tools\Forms\PlayerDatVariables.Designer.cs">
+      <DependentUpon>PlayerDatVariables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMF_Tools\Forms\QuickValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMF_Tools\Forms\QuickValueEditor.Designer.cs">
+      <DependentUpon>QuickValueEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMF_Tools\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMF_Tools\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMF_Tools\Program.cs" />
+    <Compile Include="TMF_Tools\Properties\Resources.cs" />
+    <Compile Include="TMF_Tools\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TMF_Tools\betterlistviewexpress-net35.dll" />
+    <EmbeddedResource Include="TMF_Tools\Forms\HeaderDatBlueprints.resources" />
+    <EmbeddedResource Include="TMF_Tools\Forms\PlayerDatVariables.resources" />
+    <EmbeddedResource Include="TMF_Tools\Forms\QuickValueEditor.resources" />
+    <EmbeddedResource Include="TMF_Tools\Main.resources" />
+    <EmbeddedResource Include="TMF_Tools\Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="TMF_Tools\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
